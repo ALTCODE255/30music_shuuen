@@ -10,7 +10,7 @@ with open(directory + "/creds.json", "r") as credentials:
 
 client = tweepy.Client(consumer_key=keys["consumer_key"], consumer_secret=keys["consumer_secret"], access_token=keys["access_token"], access_token_secret=keys["access_token_secret"])
 
-def getQuote():
+def getQuote() -> str:
 	with open(directory + "/shuuen.txt", "r", encoding="utf-8") as f:
 		quotes = f.read().splitlines()
 	with open(directory + "/shuuen_recent.txt", "r", encoding="utf-8") as f:
