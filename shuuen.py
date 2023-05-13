@@ -13,13 +13,17 @@ client = tweepy.Client(
 )
 
 
+def passQuote(quote: str, log: list[str]) -> bool:
+    return True if quote and quote.strip() and not quote.startswith("//") and quote not in log else False
+
+
 def getQuote() -> str:
     with open("shuuen_recent.txt", "r", encoding="utf-8") as f:
         log = f.read().splitlines()
         if len(log) < 11:
             log = [""] * (11 - len(log)) + log
     with open("shuuen.txt", "r", encoding="utf-8") as f:
-        quotes = [quote for quote in f.read().splitlines() if quote not in log and quote and quote.strip()]
+        quotes = [quote for quote in f.read().splitlines() if passQuote(quote, log)]
     random_quote = random.choice(quotes)
     log.pop(0)
     log.append(random_quote)
