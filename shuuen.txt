@@ -1,4 +1,4 @@
-// Re:放課後-終焉ゲーム- (Re:Houkago -Shuuen Game-)
+# Re:放課後-終焉ゲーム- (Re:Houkago -Shuuen Game-)
 01. Re:「–犯行声明–」(Re:「-Hankou Seimei-」) https://twitter.com/30music_shuuen/status/1493858016218607617/video/1
 02. 孤独ノ隠レンボ (Kodoku no Kakurenbo) (feat. IA) https://twitter.com/30music_shuuen/status/1493869251865690113/video/1
 03. ジブン観察日記 (Jibun Kansatsu Nikki) (feat. IA) https://twitter.com/30music_shuuen/status/1493869815383015424/video/1
@@ -13,7 +13,7 @@
 12. Re:「–勝利宣言–」(Re:「-Shouri Sengen-」) (feat. 150P) https://twitter.com/30music_shuuen/status/1493874103702282242/video/1
 13. (Bonus Track) (feat. 150P) https://twitter.com/30music_shuuen/status/1493874449036165121/video/1
 
-// 終焉-Re:write- (Shuuen -Re:write-)
+# 終焉-Re:write- (Shuuen -Re:write-)
 01.「-はじめの後悔-」(「-Hajime no Koukai-」) (feat. 神谷浩史 / Kamiya Hiroshi) https://twitter.com/30music_shuuen/status/1493876120273362946/video/1
 02.「-犯行声明-」(「-Hankou Seimei-」) https://twitter.com/30music_shuuen/status/1493877367550267397/video/1
 03. 終末-Re-write- (Shuumatsu -Re:write-) (feat. GUMI, MAYU, 初音ミク, 鏡音リン) https://twitter.com/30music_shuuen/status/1493879344967553029/video/1
@@ -42,7 +42,7 @@
 26.「-舞台挨拶-」(「-Butai Aisatsu-」) (feat. 神谷浩史 / Kamiya Hiroshi) https://twitter.com/30music_shuuen/status/1493981673104416770/video/1
 27.「-かくされた後書-」(「-Kakusareta Atogaki-」) (feat. 150P) https://twitter.com/30music_shuuen/status/1493982310395379716/video/1
 
-// アンラッキー末期ー@スクールトリップ (Unlucky Makki @ School Trip)
+# アンラッキー末期ー@スクールトリップ (Unlucky Makki @ School Trip)
 01. -準備中- (-Junbi chuu-) https://twitter.com/30music_shuuen/status/1493986561016221701/video/1
 02. アンラッキー末期-@スクールトリップ (Unlucky Makki @ School Trip) (feat. IA) https://twitter.com/30music_shuuen/status/1493987001116151808/video/1
 03. -散策中- (-Sansaku chuu-) https://twitter.com/30music_shuuen/status/1493987313583464453/video/1
@@ -55,7 +55,7 @@
 10. 群青メモリーズ (Gunjou Memories) (feat. IA) https://twitter.com/30music_shuuen/status/1494011433373233152/video/1
 11. やる気への木さんの唄 (Yaruki e no Ki-san no Uta) (feat. IA) https://twitter.com/30music_shuuen/status/1494011713611460611/video/1
 
-// No Voice
+# No Voice
 01. Curtain https://twitter.com/30music_shuuen/status/1494013085647921153/video/1
 04. Hide-and-Seek https://twitter.com/30music_shuuen/status/1494013435268399104/video/1
 05. Coverage https://twitter.com/30music_shuuen/status/1494013814655766531/video/1
@@ -68,7 +68,7 @@
 16. ニセモノ注意報 -No Voice Inst Arrange- (Nisemono Chuuihou -No Voice Inst Arrange-) https://twitter.com/30music_shuuen/status/1494041675340992514/video/1
 17. Closing https://twitter.com/30music_shuuen/status/1494042327450411009/video/1
 
-// 終焉 -Re:mind- (Shuuen -Re:mind-)
+# 終焉 -Re:mind- (Shuuen -Re:mind-)
 01.「-反攻声明-」(「-Hankou Seimei-」) https://twitter.com/30music_shuuen/status/1494042701695574018/video/1
 02. 報復リヴァイバル (Houfuku Revival) (feat. IA) https://twitter.com/30music_shuuen/status/1494043239308939264/video/1
 03. 欠落-Re:code- (Ketsuraku-Re:code-) (feat. IA) https://twitter.com/30music_shuuen/status/1494087516026130432/video/1
@@ -89,7 +89,7 @@
 18. シュレディンガーの猫 (Schrödinger no Neko) (feat. IA) https://twitter.com/30music_shuuen/status/1494100493995769861/video/1
 19. 「-病室1713-号」(「-Byoushitsu 1713 gou-」) (feat. 神谷浩史 / Kamiya Hiroshi) https://twitter.com/30music_shuuen/status/1494101019701092352/video/1
 
-// 終焉 -Re:act- (Shuuen -Re:act-)
+# 終焉 -Re:act- (Shuuen -Re:act-)
 01. 衝撃リアクト (Shougeki React) (feat. 片霧烈火 / Katakiri Rekka) https://twitter.com/30music_shuuen/status/1494101472467820547/video/1
 02. -Parallel- https://twitter.com/30music_shuuen/status/1494101545490599940/video/1
 03. 孤独ノ隠レンボ (Kodoku no Kakurenbo) (feat. 緒方恵美 / Ogata Megumi) https://twitter.com/30music_shuuen/status/1494101794175127552/video/1
@@ -108,7 +108,7 @@
 16. 平凡な日常 (Heibon na Nichijou) (feat. 霜月はるか / Shimotsuki Haruka) https://twitter.com/30music_shuuen/status/1494105034975371265/video/1
 17. -Paranoia- https://twitter.com/30music_shuuen/status/1494105106962210818/video/1
 
-// Limited / No Album
+# Limited / No Album
 猿マネ椅子盗りゲーム (Sarumane Isutori Game) (feat. IA) https://twitter.com/30music_shuuen/status/1493982902081572864/video/1
 Load to Continue (feat. そらる & ろん) https://twitter.com/30music_shuuen/status/1493985183627825154/video/1
 ゲームアンドガールズ (Game and Girls) (feat. 米澤円 / Yonezawa Madoka & 平野綾 / Hirano Ai) https://twitter.com/30music_shuuen/status/1494097713998151680/video/1
