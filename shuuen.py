@@ -1,11 +1,8 @@
 import tweepy
 import json
-import os
 import random
 
-directory = os.path.realpath(os.path.dirname(__file__))
-
-with open(directory + "/creds.json", "r") as credentials:
+with open("creds.json", "r") as credentials:
     keys = json.load(credentials)
 
 client = tweepy.Client(
@@ -17,9 +14,9 @@ client = tweepy.Client(
 
 
 def getQuote() -> str:
-    with open(directory + "/shuuen.txt", "r", encoding="utf-8") as f:
+    with open("shuuen.txt", "r", encoding="utf-8") as f:
         quotes = f.read().splitlines()
-    with open(directory + "/shuuen_recent.txt", "r", encoding="utf-8") as f:
+    with open("shuuen_recent.txt", "r", encoding="utf-8") as f:
         log = f.read().splitlines()
         if len(log) < 11:
             log = [""] * (11 - len(log)) + log
@@ -27,7 +24,7 @@ def getQuote() -> str:
     random_quote = random.choice(filtered_quotes)
     log.pop(0)
     log.append(random_quote)
-    with open(directory + "/shuuen_recent.txt", "w", encoding="utf-8") as f:
+    with open("shuuen_recent.txt", "w", encoding="utf-8") as f:
         f.write("\n".join(log))
     return random_quote
 
