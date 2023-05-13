@@ -14,14 +14,13 @@ client = tweepy.Client(
 
 
 def getQuote() -> str:
-    with open("shuuen.txt", "r", encoding="utf-8") as f:
-        quotes = f.read().splitlines()
     with open("shuuen_recent.txt", "r", encoding="utf-8") as f:
         log = f.read().splitlines()
         if len(log) < 11:
             log = [""] * (11 - len(log)) + log
-    filtered_quotes = [quote for quote in quotes if quote not in log]
-    random_quote = random.choice(filtered_quotes)
+    with open("shuuen.txt", "r", encoding="utf-8") as f:
+        quotes = [quote for quote in f.read().splitlines() if quote not in log and quote and quote.strip()]
+    random_quote = random.choice(quotes)
     log.pop(0)
     log.append(random_quote)
     with open("shuuen_recent.txt", "w", encoding="utf-8") as f:
