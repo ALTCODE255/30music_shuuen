@@ -26,14 +26,14 @@ def getQuote() -> str:
         log = f.read().splitlines()
         if len(log) < 11:
             log = [""] * (11 - len(log)) + log
-    with open("shuuen.txt", "r", encoding="utf-8") as f:
+    with open("shuuen_music.txt", "r", encoding="utf-8") as f:
         quotes = [quote for quote in f.read().splitlines() if passQuote(quote, log)]
     random_quote = random.choice(quotes)
     log.pop(0)
     log.append(random_quote)
     with open("shuuen_recent.txt", "w", encoding="utf-8") as f:
         f.write("\n".join(log))
-    return random_quote
+    return random_quote.replace("\\n", "\n")
 
 
 client.create_tweet(text=getQuote())
