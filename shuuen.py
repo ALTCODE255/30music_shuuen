@@ -22,7 +22,7 @@ def passQuote(quote: str, log: list[str]) -> bool:
 
 
 def getQuote() -> str:
-    with open("shuuen_recent.txt", "r", encoding="utf-8") as f:
+    with open("recent.txt", "r", encoding="utf-8") as f:
         log = f.read().splitlines()
         if len(log) < 11:
             log = [""] * (11 - len(log)) + log
@@ -31,7 +31,7 @@ def getQuote() -> str:
     random_quote = random.choice(quotes)
     log.pop(0)
     log.append(random_quote)
-    with open("shuuen_recent.txt", "w", encoding="utf-8") as f:
+    with open("recent.txt", "w", encoding="utf-8") as f:
         f.write("\n".join(log))
     return random_quote.replace("\\n", "\n")
 
