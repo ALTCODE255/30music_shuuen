@@ -1,15 +1,13 @@
-import tweepy
-import json
+import os
 import random
 
-with open("creds.json", "r") as credentials:
-    keys = json.load(credentials)
+import tweepy
 
 client = tweepy.Client(
-    consumer_key=keys["consumer_key"],
-    consumer_secret=keys["consumer_secret"],
-    access_token=keys["access_token"],
-    access_token_secret=keys["access_token_secret"],
+    consumer_key=os.environ["CONSUMER_KEY"],
+    consumer_secret=os.environ["CONSUMER_SECRET"],
+    access_token=os.environ["ACCESS_TOKEN"],
+    access_token_secret=os.environ["ACCESS_TOKEN_SECRET"],
 )
 
 
@@ -26,7 +24,7 @@ def getQuote() -> str:
         log = f.read().splitlines()
         if len(log) < 11:
             log = [""] * (11 - len(log)) + log
-    with open("shuuen_music.txt", "r", encoding="utf-8") as f:
+    with open("music.txt", "r", encoding="utf-8") as f:
         quotes = [quote for quote in f.read().splitlines() if passQuote(quote, log)]
     random_quote = random.choice(quotes)
     log.pop(0)
