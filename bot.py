@@ -1,9 +1,11 @@
 import os
 import random
+import sys
 
 from dotenv import load_dotenv
 import tweepy
 
+os.chdir(sys.path[0])
 load_dotenv()
 
 client = tweepy.Client(
@@ -15,11 +17,7 @@ client = tweepy.Client(
 
 
 def passQuote(quote: str, log: list[str]) -> bool:
-    return (
-        True
-        if quote.strip() and not quote.startswith("#") and quote not in log
-        else False
-    )
+    return quote.strip() and not quote.startswith("#") and quote not in log
 
 
 def getQuote() -> str:
@@ -28,7 +26,8 @@ def getQuote() -> str:
         if len(log) < 11:
             log = [""] * (11 - len(log)) + log
     with open("music.txt", "r", encoding="utf-8") as f:
-        quotes = [quote for quote in f.read().splitlines() if passQuote(quote, log)]
+        quotes = [quote for quote in f.read().splitlines()
+                  if passQuote(quote, log)]
     random_quote = random.choice(quotes)
     log.pop(0)
     log.append(random_quote)
