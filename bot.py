@@ -21,10 +21,11 @@ def passQuote(quote: str, log: list[str]) -> bool:
 
 
 def getQuote() -> str:
+    limit = int(os.getenv("STORAGE_THRESHOLD"))
     with open("recent.txt", "r", encoding="utf-8") as f:
         log = f.read().splitlines()
-        if len(log) < 11:
-            log = [""] * (11 - len(log)) + log
+        if len(log) < limit:
+            log = [""] * (limit - len(log)) + log
     with open("music.txt", "r", encoding="utf-8") as f:
         quotes = [quote for quote in f.read().splitlines()
                   if passQuote(quote, log)]
