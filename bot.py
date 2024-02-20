@@ -16,25 +16,25 @@ client = tweepy.Client(
 )
 
 
-def passQuote(quote: str, log: list[str]) -> bool:
-    return quote.strip() and not quote.startswith("#") and quote not in log
+def passTweet(tweet: str, log: list[str]) -> bool:
+    return tweet.strip() and not tweet.startswith("#") and tweet not in log
 
 
-def getQuote() -> str:
+def getTweet() -> str:
     limit = int(os.getenv("STORAGE_THRESHOLD"))
     with open("recent.txt", "r", encoding="utf-8") as f:
         log = f.read().splitlines()
         if len(log) < limit:
             log = [""] * (limit - len(log)) + log
     with open("music.txt", "r", encoding="utf-8") as f:
-        quotes = [quote for quote in f.read().splitlines()
-                  if passQuote(quote, log)]
-    random_quote = random.choice(quotes)
+        tweets = [tweet for tweet in f.read().splitlines()
+                  if passTweet(tweet, log)]
+    random_tweet = random.choice(tweets)
     log.pop(0)
-    log.append(random_quote)
+    log.append(random_tweet)
     with open("recent.txt", "w", encoding="utf-8") as f:
         f.write("\n".join(log))
-    return random_quote.replace("\\n", "\n")
+    return random_tweet.replace("\\n", "\n")
 
 
-client.create_tweet(text=getQuote())
+client.create_tweet(text=getTweet())
