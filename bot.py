@@ -2,6 +2,7 @@ import os
 import random
 import sys
 import pickle
+import re
 
 from dotenv import load_dotenv
 import tweepy
@@ -17,8 +18,10 @@ client = tweepy.Client(
 )
 
 
-def passTweet(tweet: str, log: list[str]) -> bool:
-    return tweet.strip() and not tweet.startswith("#") and tweet not in log
+def getTweets(log: list[str]) -> list[str]:
+    with open("music.txt", "r", encoding="utf-8") as f:
+        all_tweets = re.sub(r"^\s|^[#;].*\n", "", f.read()).strip("\n")
+    return [tweet for tweet in all_tweets.splitlines() if tweet not in log]
 
 
 def getTweet() -> str:
@@ -28,10 +31,7 @@ def getTweet() -> str:
             log = pickle.load(f)
     except FileNotFoundError:
         log = [None]*limit
-    with open("music.txt", "r", encoding="utf-8") as f:
-        tweets = [tweet for tweet in f.read().splitlines()
-                  if passTweet(tweet, log)]
-    random_tweet = random.choice(tweets)
+    random_tweet = random.choice(getTweets())
     log.pop(0)
     log.append(random_tweet)
     with open("recent.pkl", "wb") as f:
