@@ -1,6 +1,7 @@
 import os
 import random
 import sys
+import pickle
 
 from dotenv import load_dotenv
 import tweepy
@@ -22,19 +23,21 @@ def passTweet(tweet: str, log: list[str]) -> bool:
 
 def getTweet() -> str:
     limit = int(os.getenv("STORAGE_THRESHOLD"))
-    with open("recent.txt", "r", encoding="utf-8") as f:
-        log = f.read().splitlines()
-        if len(log) < limit:
-            log = [""] * (limit - len(log)) + log
+    try:
+        with open("recent.pkl", "rb") as f:
+            log = pickle.load(f)
+    except FileNotFoundError:
+        log = [""]*limit
     with open("music.txt", "r", encoding="utf-8") as f:
         tweets = [tweet for tweet in f.read().splitlines()
                   if passTweet(tweet, log)]
     random_tweet = random.choice(tweets)
     log.pop(0)
     log.append(random_tweet)
-    with open("recent.txt", "w", encoding="utf-8") as f:
-        f.write("\n".join(log))
+    with open("recent.pkl", "wb") as f:
+        pickle.dump(log, f)
     return random_tweet.replace("\\n", "\n")
 
 
-client.create_tweet(text=getTweet())
+if __name__ == "__main__":
+    tweet = client.create_tweet(text=getTweet())
