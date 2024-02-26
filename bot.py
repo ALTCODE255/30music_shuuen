@@ -27,7 +27,7 @@ def getTweet() -> str:
         with open("recent.pkl", "rb") as f:
             log = pickle.load(f)
     except FileNotFoundError:
-        log = [""]*limit
+        log = [None]*limit
     with open("music.txt", "r", encoding="utf-8") as f:
         tweets = [tweet for tweet in f.read().splitlines()
                   if passTweet(tweet, log)]
