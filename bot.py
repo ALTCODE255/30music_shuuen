@@ -20,7 +20,7 @@ client = tweepy.Client(
 
 def getTweets(log: list[str]) -> list[str]:
     with open("music.txt", "r", encoding="utf-8") as f:
-        all_tweets = re.sub(r"^\s|^[#;].*\n", "", f.read()).strip("\n")
+        all_tweets = re.sub(r"^\s+|^[#;].*\n", "", f.read()).strip("\n")
     return [tweet for tweet in all_tweets.splitlines() if tweet not in log]
 
 
