@@ -31,7 +31,7 @@ def getTweet() -> str:
             log = pickle.load(f)
     except FileNotFoundError:
         log = [None]*limit
-    random_tweet = random.choice(getTweets())
+    random_tweet = random.choice(getTweets(log))
     log.pop(0)
     log.append(random_tweet)
     with open("recent.pkl", "wb") as f:
