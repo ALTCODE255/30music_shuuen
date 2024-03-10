@@ -39,7 +39,7 @@ def postTweet():
 
     tweet = getRandomTweet(log)
     try:
-        client.create_tweet(text="[🗨️🤖]\n" + tweet)
+        client.create_tweet(text=tweet)
     except Exception as e:
         print(e)
         return
